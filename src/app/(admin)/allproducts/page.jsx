@@ -47,6 +47,7 @@ const Products = () => {
               <th>Product Id</th>
               <th>Image</th>
               <th>Title</th>
+              <th>Price</th>
               <th>Is Featured</th>
               <th>Actions</th>
             </tr>
@@ -68,6 +69,7 @@ const Products = () => {
                   />
                 </td>
                 <td className="p-2">{product.title}</td>
+                <td className="p-2">{product.price}</td>
                 <td className="p-2">{product.isFeatured ? "Yes" : "No"}</td>
                 <td className="p-2">
                   <div className="flex items-center gap-2">

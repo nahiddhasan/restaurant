@@ -9,15 +9,15 @@ const Price = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(0);
   const dispatch = useDispatch();
-
+  console.log(total);
   useEffect(() => {
-    setTotal(
-      quantity *
-        (product.options
-          ? product.price + product.options[selected].additionalPrice
-          : product.price)
-    );
-  }, [quantity, selected, product.options, product.price]);
+    if (product.options?.length) {
+      setTotal(
+        quantity * product.price +
+          parseInt(product.options[selected].additionalPrice)
+      );
+    }
+  }, [quantity, selected, product]);
 
   const handleClick = () => {
     dispatch(
