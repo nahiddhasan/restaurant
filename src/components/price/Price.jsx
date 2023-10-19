@@ -9,7 +9,6 @@ const Price = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(0);
   const dispatch = useDispatch();
-  console.log(total);
   useEffect(() => {
     if (product.options?.length) {
       setTotal(
