@@ -15,6 +15,7 @@ const Menu = async () => {
   return (
     <div className="p-4 lg:px-20 xl:px-40 flex items-center flex-col md:flex-row h-[calc(100vh-5rem)]">
       {menu &&
+        menu.length &&
         menu.map((cat) => (
           <Link
             key={cat.id}
