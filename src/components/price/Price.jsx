@@ -39,19 +39,20 @@ const Price = ({ product }) => {
       <h2 className="text-2xl font-bold">${total}</h2>
       {/* Option Container */}
       <div className="flex gap-4 flex-wrap">
-        {product.options.map((option, index) => (
-          <button
-            key={index}
-            className="p-2 min-w-[6rem] ring-1 ring-red-500 rounded-md"
-            style={{
-              background: selected === index ? "rgb(248 113 113)" : "white",
-              color: selected === index ? "white" : "red",
-            }}
-            onClick={() => setSelected(index)}
-          >
-            {option.title}
-          </button>
-        ))}
+        {product.option &&
+          product.options.map((option, index) => (
+            <button
+              key={index}
+              className="p-2 min-w-[6rem] ring-1 ring-red-500 rounded-md"
+              style={{
+                background: selected === index ? "rgb(248 113 113)" : "white",
+                color: selected === index ? "white" : "red",
+              }}
+              onClick={() => setSelected(index)}
+            >
+              {option.title}
+            </button>
+          ))}
       </div>
       {/* Qty add Container */}
       <div className="w-full flex justify-between items-center p-3 ring-1 ring-red-500">

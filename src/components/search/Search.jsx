@@ -9,8 +9,6 @@ const Search = () => {
   const [searching, setSearching] = useState(false);
   const [searchInput, setSearchInput] = useState();
   const [items, setItems] = useState([]);
-  console.log(searchInput);
-  console.log(items);
 
   const handleSearch = async (searchInput) => {
     if (searchInput == "") {
