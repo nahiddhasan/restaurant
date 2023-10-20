@@ -21,7 +21,7 @@ export const POST = async (req)=>{
 }
 
 //get user orders
-export const GET = async ()=>{
+export const GET = async (req)=>{
     const session = await getAuthSession()
 
     try {
