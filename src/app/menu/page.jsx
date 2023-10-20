@@ -42,8 +42,8 @@
 
 // export default Menu;
 
-const menu = () => {
-  return <div>menu</div>;
+const Menu = () => {
+  return <div>Menu</div>;
 };
 
-export default menu;
+export default Menu;
