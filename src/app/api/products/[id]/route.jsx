@@ -1,3 +1,4 @@
+import prisma from "@/app/utils/connect";
 import { NextResponse } from "next/server";
 
 //get single product
